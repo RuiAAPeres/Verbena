@@ -15,8 +15,57 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lTh-cL-3et">
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7XY-Jp-kWN"/>
+                                    <constraint firstAttribute="width" constant="200" id="8gt-Lb-06R"/>
+                                    <constraint firstAttribute="height" constant="200" id="kkp-Yo-H17"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="7XY-Jp-kWN"/>
+                                        <exclude reference="8gt-Lb-06R"/>
+                                        <exclude reference="kkp-Yo-H17"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="200" width="200" height="200"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="100" y="100" width="200" height="200"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="7XY-Jp-kWN"/>
+                                        <include reference="8gt-Lb-06R"/>
+                                        <exclude reference="kkp-Yo-H17"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92347814633267389" green="0.94787767847674409" blue="0.97739189863204956" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="lTh-cL-3et" secondAttribute="centerY" id="6j7-j1-BGB"/>
+                            <constraint firstAttribute="centerX" secondItem="lTh-cL-3et" secondAttribute="centerX" id="zey-08-E1L"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="6j7-j1-BGB"/>
+                                <exclude reference="zey-08-E1L"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="6j7-j1-BGB"/>
+                                <include reference="zey-08-E1L"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="lTh-cL-3et" id="sLX-z0-gw9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

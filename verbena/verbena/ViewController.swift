@@ -9,13 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+  @IBOutlet weak var imageView: UIImageView!
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let image = renderImageWithSize(CGSize(width: 200, height: 200), transparency: true) {
+    let renderedImage = renderImageWithSize(CGSize(width: 200, height: 200), transparency: true) {
       let backgroundColor = UIColor(hue: 0.289, saturation: 0.485, brightness: 0.792, alpha: 1.0)
-      
+
       var ovalPath = UIBezierPath(ovalInRect: CGRectMake(0, 0, 200, 200))
       ovalPath.fillWithColor(backgroundColor)
       
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
       letterPath.closePath()
       letterPath.fillWithColor(UIColor.whiteColor())
     }
+
+    imageView.image = renderedImage
   }
   
   override func didReceiveMemoryWarning() {
